@@ -7,8 +7,8 @@ void setup(){
 void draw(){
 }
 
-String langezin(String a, String b, String c, String d);{
+String langezin(String a, String b, String c, String d){
   String antwoord;
-  antwoord=a+b+c+d;
+  antwoord=(a+" "+b+" "+c+" "+d);
   return antwoord;
 }
