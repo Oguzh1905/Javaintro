@@ -11,7 +11,7 @@ void draw(){
   if(seconden>=10){
    tijd=false; 
   }
-  text(spaties,150,150);
+  text("Spaties:"+spaties,150,150);
 }
 
 void keyReleased(){
