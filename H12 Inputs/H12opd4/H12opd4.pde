@@ -1,6 +1,7 @@
 int seconden;
 int stopwatch;
 int miles;
+int spatie;
 boolean begin= false;
 boolean start;
 void setup(){
@@ -17,6 +18,12 @@ void draw(){
 
 void keyPressed(){
   if(keyCode==32){
+    if(begin==false){
+      start= true;
+    }
+    if(begin== true){
+      start= false;
+    }
     
     
   }
