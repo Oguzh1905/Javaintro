@@ -8,19 +8,19 @@ void setup(){
   computerkeuze = 0 ;
   a = -1 ;
   //locatie en de grootte van de buttons
-  rbuttonX = width/10;
+  rbuttonX = width/15;
   rbuttonY = height/1.25;
-  rbuttonW = width/10;
+  rbuttonW = width/6;
   rbuttonH = height/10;
   
-  pbuttonX = width/2.22;
+  pbuttonX = width/2.5;
   pbuttonY = height/1.25;
-  pbuttonW = width/10;
+  pbuttonW = width/5.3;
   pbuttonH = height/10;
   
-  sbuttonX = width/1.25;
+  sbuttonX = width/1.35;
   sbuttonY = height/1.25;
-  sbuttonW = width/10;
+  sbuttonW = width/5;
   sbuttonH = height/10;
 }
 
@@ -42,8 +42,8 @@ void buttons(){
   textAlign(CENTER);
   fill(0);
   text("Steen",width/6.7,height/1.14);
-  text("papier",width/2,height/1.14);
-  text("schaar",width/1.18,height/1.14);
+  text("Papier",width/2,height/1.14);
+  text("Schaar",width/1.18,height/1.14);
 }
 
 void buttonsclicked(){
@@ -53,11 +53,11 @@ void buttonsclicked(){
       computerkeuze = (int)random(1, 4);//random keuze van computer
 }
   if(mouseX > pbuttonX && mouseX < pbuttonX + pbuttonW && mouseY > pbuttonY && mouseY < pbuttonY + pbuttonH && computerkeuze == 0){
-      spelerkeuze = 1;//papier
+      spelerkeuze = 2;//papier
       computerkeuze = (int)random(1, 4);//random keuze van computer
 }
   if(mouseX > sbuttonX && mouseX < sbuttonX + sbuttonW && mouseY > sbuttonY && mouseY < sbuttonY + sbuttonH && computerkeuze == 0){
-      spelerkeuze = 1;//schaar
+      spelerkeuze = 3;//schaar
       computerkeuze = (int)random(1, 4);//random keuze van computer
 }
   }
@@ -87,6 +87,20 @@ void computer(){
 }
 
 void results(){
+    //als het gelijk spel is
+  if((spelerkeuze == 1 && computerkeuze == 1)||
+  (spelerkeuze == 2 && computerkeuze == 2)||
+  (spelerkeuze == 3 && computerkeuze == 3)){
+    textSize(45);
+    textAlign(CENTER);
+    fill(0,255,0);
+    text("Het is gelijk spel",width/2, height/2);
+    //reset de game
+    if(keyPressed){
+      spelerkeuze = 0;
+      computerkeuze = 0;
+    }
+ }
   // als de speler wint
   if((spelerkeuze == 2 && computerkeuze == 1) ||
   (spelerkeuze == 1 && computerkeuze == 3) ||
@@ -105,20 +119,6 @@ void results(){
 if((spelerkeuze == 1 && computerkeuze == 2) ||
   (spelerkeuze == 3 && computerkeuze == 1) ||
   (spelerkeuze == 2 && computerkeuze == 3)){
-    textSize(45);
-    textAlign(CENTER);
-    fill(0,255,0);
-    text("computer wint",width/2, height/2);
-    //reset de game
-    if(keyPressed){
-      spelerkeuze = 0;
-      computerkeuze = 0;
-    }
-  }
-  //als het gelijk spel is
-  if((spelerkeuze == 1 && computerkeuze == 1)||
-  (spelerkeuze == 2 && computerkeuze == 2)||
-  (spelerkeuze == 3 && computerkeuze == 3)){
     textSize(45);
     textAlign(CENTER);
     fill(0,255,0);
