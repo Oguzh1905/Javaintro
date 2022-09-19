@@ -69,19 +69,19 @@ void computer(){
       textSize(45);
       textAlign(CENTER);
       fill(255);
-      text("computer heeft steen gespeeld", width/2, height/10);
+      text("computer heeft steen gespeeld", 400, 100);
 }
   if(computerkeuze == 2){
       textSize(45);
       textAlign(CENTER);
       fill(255);
-      text("computer heeft papier gespeeld", width/2, height/10);
+      text("computer heeft papier gespeeld", 400, 100);
   }
     if(computerkeuze == 3){
       textSize(45);
       textAlign(CENTER);
       fill(255);
-      text("computer heeft schaar gespeeld", width/2, height/10);
+      text("computer heeft schaar gespeeld", 400, 100);
 }
   }
 }
@@ -94,7 +94,7 @@ void results(){
     textSize(45);
     textAlign(CENTER);
     fill(0,255,0);
-    text("Het is gelijk spel",width/2, height/2);
+    text("Het is gelijk spel",400, 300);
     //reset de game
     if(keyPressed){
       spelerkeuze = 0;
@@ -108,7 +108,7 @@ void results(){
     textSize(45);
     textAlign(CENTER);
     fill(0,0,255);
-    text("jij wint",width/2, height/2);
+    text("jij wint",400, 300);
     //reset de game
     if(keyPressed){
       spelerkeuze = 0;
@@ -122,7 +122,7 @@ if((spelerkeuze == 1 && computerkeuze == 2) ||
     textSize(45);
     textAlign(CENTER);
     fill(0,255,0);
-    text("computer wint",width/2, height/2);
+    text("computer wint",400, 300);
     //reset de game
     if(keyPressed){
       spelerkeuze = 0;
