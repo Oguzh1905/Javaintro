@@ -25,7 +25,7 @@ void setup(){
 }
 
 void draw(){
-  background(255);
+  background(0);
   computer();
   buttons();
   buttonsclicked();
@@ -68,19 +68,19 @@ void computer(){
     if(computerkeuze == 1){
       textSize(45);
       textAlign(CENTER);
-      fill(0);
+      fill(255);
       text("computer heeft steen gespeeld", width/2, height/10);
 }
   if(computerkeuze == 2){
       textSize(45);
       textAlign(CENTER);
-      fill(0);
+      fill(255);
       text("computer heeft papier gespeeld", width/2, height/10);
   }
     if(computerkeuze == 3){
       textSize(45);
       textAlign(CENTER);
-      fill(0);
+      fill(255);
       text("computer heeft schaar gespeeld", width/2, height/10);
 }
   }
