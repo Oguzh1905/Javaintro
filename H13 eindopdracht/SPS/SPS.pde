@@ -1,3 +1,4 @@
+//variablen
 int spelerkeuze, computerkeuze ;
 float rbuttonX,rbuttonY,rbuttonW,rbuttonH,pbuttonX,pbuttonY,pbuttonW,pbuttonH,sbuttonX,sbuttonY,sbuttonW,sbuttonH ;
 int a ;
@@ -8,20 +9,20 @@ void setup(){
   computerkeuze = 0 ;
   a = -1 ;
   //locatie en de grootte van de buttons
-  rbuttonX = width/15;
-  rbuttonY = height/1.25;
-  rbuttonW = width/6;
-  rbuttonH = height/10;
+  rbuttonX = 55;
+  rbuttonY = 485;
+  rbuttonW = 145;
+  rbuttonH = 50;
   
-  pbuttonX = width/2.5;
-  pbuttonY = height/1.25;
-  pbuttonW = width/5.3;
-  pbuttonH = height/10;
+  pbuttonX = 330;
+  pbuttonY = 485;
+  pbuttonW = 145;
+  pbuttonH = 50;
   
-  sbuttonX = width/1.35;
-  sbuttonY = height/1.25;
-  sbuttonW = width/5;
-  sbuttonH = height/10;
+  sbuttonX = 595;
+  sbuttonY = 485;
+  sbuttonW = 165;
+  sbuttonH = 50;
 }
 
 void draw(){
@@ -38,12 +39,12 @@ void buttons(){
   rect(rbuttonX,rbuttonY,rbuttonW,rbuttonH);
   rect(pbuttonX,pbuttonY,pbuttonW,pbuttonH);
   rect(sbuttonX,sbuttonY,sbuttonW,sbuttonH);
-  textSize(width/15);
+  textSize(45);
   textAlign(CENTER);
   fill(0);
-  text("Steen",width/6.7,height/1.14);
-  text("Papier",width/2,height/1.14);
-  text("Schaar",width/1.18,height/1.14);
+  text("Steen",125,525);
+  text("Papier",400,525);
+  text("Schaar",675,525);
 }
 
 void buttonsclicked(){
@@ -93,7 +94,7 @@ void results(){
   (spelerkeuze == 3 && computerkeuze == 3)){
     textSize(45);
     textAlign(CENTER);
-    fill(0,255,0);
+    fill(0,0,255);
     text("Het is gelijk spel",400, 300);
     //reset de game
     if(keyPressed){
@@ -107,8 +108,8 @@ void results(){
   (spelerkeuze == 3 && computerkeuze == 2)){
     textSize(45);
     textAlign(CENTER);
-    fill(0,0,255);
-    text("jij wint",400, 300);
+    fill(0,255,0);
+    text("Jij wint",400, 300);
     //reset de game
     if(keyPressed){
       spelerkeuze = 0;
@@ -121,8 +122,8 @@ if((spelerkeuze == 1 && computerkeuze == 2) ||
   (spelerkeuze == 2 && computerkeuze == 3)){
     textSize(45);
     textAlign(CENTER);
-    fill(0,255,0);
-    text("computer wint",400, 300);
+    fill(255,0,0);
+    text("Computer wint",400, 300);
     //reset de game
     if(keyPressed){
       spelerkeuze = 0;
