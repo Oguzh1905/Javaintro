@@ -9,16 +9,17 @@ void setup(){
   computerkeuze = 0 ;
   a = -1 ;
   //locatie en de grootte van de buttons
+  //steen knop
   rbuttonX = 55;
   rbuttonY = 485;
   rbuttonW = 145;
   rbuttonH = 50;
-  
+  //papier knop
   pbuttonX = 330;
   pbuttonY = 485;
   pbuttonW = 145;
   pbuttonH = 50;
-  
+  //steen knop
   sbuttonX = 595;
   sbuttonY = 485;
   sbuttonW = 165;
