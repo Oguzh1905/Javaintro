@@ -35,9 +35,11 @@ void draw(){
 
 //wat er gaat gebeuren als je op 1 van de knoppen klikt
 void buttons(){
-  fill(255);
+  fill(99, 99, 99);
   rect(rbuttonX,rbuttonY,rbuttonW,rbuttonH);
+  fill(255);
   rect(pbuttonX,pbuttonY,pbuttonW,pbuttonH);
+  fill(193, 125, 20);
   rect(sbuttonX,sbuttonY,sbuttonW,sbuttonH);
   textSize(45);
   textAlign(CENTER);
